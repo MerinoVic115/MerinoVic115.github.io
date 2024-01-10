@@ -1,39 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector Descendiente</title>
+  <style>
+    /* Estilos de ejemplo */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
 
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Selector de Agrupación con Comas - Más Ejemplos</title>
-      <style>
-        /* Estilos de ejemplo */
-        .rojo { color: red; }
-        .negrita { font-weight: bold; }
-        .subrayado { text-decoration: underline; }
-    
-        /* Selector de agrupación con comas  */
-        .rojo, .negrita, .subrayado {
-          font-size: 18px; /* Aplicar el mismo tamaño de fuente a todas las clases */
-        }
-      </style>
-    </head>
-    <body>
-    
-      <!-- Ejemplo 1 -->
-      <p class="rojo negrita">Ejemplo de como quedaria este texto.</p>
-    
-      <!-- Ejemplo 2 -->
-      <p class="rojo subrayado">Este párrafo tiene estilos diferentes a el de arriba.</p>
-    
-      <!-- Ejemplo 3 -->
-      <div class="rojo negrita">Este div tiene estilos como el primer texto.</div>
-    
-      <!-- Ejemplo 4 -->
-      <span class="negrita subrayado">Este span tiene estilos como el segundo texto.</span>
-    
-      <!-- Ejemplo 5 -->
-      <p class="subrayado">Este párrafo tiene solo un estilo .</p>
-    
-    </body>
-    </html>
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    main {
+      margin-top: 20px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    /* Selector descendiente */
+    main section p {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Selector Descendiente</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Sección 1</h2>
+      <p>Este es un párrafo dentro de la sección 1.</p>
+    </section>
+
+    <section>
+      <h2>Sección 2</h2>
+      <p>Este es otro párrafo dentro de la sección 2.</p>
+    </section>
+  </main>
+
+</body>
+</html>
+
     
