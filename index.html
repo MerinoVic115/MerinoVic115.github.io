@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selector Descendiente</title>
+  <title>Selector Hijo</title>
   <style>
     /* Estilos de ejemplo */
     body {
@@ -12,12 +12,33 @@
     }
 
     header {
-      background-color: #5606ea;
-      color: rgb(196, 9, 9);
+      background-color: #333;
+      color: white;
       padding: 10px;
       text-align: center;
     }
 
+    nav {
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    nav > ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav > ul > li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    nav > ul > li > a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
 
     main {
       margin-top: 20px;
@@ -35,8 +56,8 @@
       line-height: 1.5;
     }
 
-    /* Selector descendiente */
-    main section p {
+    /* Selector de hijo */
+    main > section > p {
       font-style: italic;
     }
   </style>
@@ -44,19 +65,27 @@
 <body>
 
   <header>
-    <h1>Selector Descendiente</h1>
+    <h1>Selector Hijo</h1>
   </header>
 
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
 
   <main>
     <section>
       <h2>Sección 1</h2>
-      <p>Este es un párrafo dentro de la sección 1.</p>
+      <p>Este es un párrafo directamente dentro de la sección 1.</p>
     </section>
 
     <section>
       <h2>Sección 2</h2>
-      <p>Este es otro párrafo dentro de la sección 2.</p>
+      <p>Este es otro párrafo directamente dentro de la sección 2.</p>
     </section>
   </main>
 
